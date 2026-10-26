@@ -1,0 +1,162 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    color: #263238;
+    line-height: 1.6;
+}
+
+header {
+    background: #176b52;
+    color: white;
+    padding: 25px 8%;
+}
+
+header h1 {
+    margin-bottom: 5px;
+}
+
+nav {
+    background: #10533f;
+    padding: 12px 8%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+section {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #0000000d;
+}
+
+h2 {
+    color: #176b52;
+    margin-bottom: 15px;
+}
+
+.servicos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 15px;
+    margin-top: 18px;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 18px;
+}
+
+.card h3 {
+    margin-bottom: 8px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 11px;
+    margin-top: 5px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    font: inherit;
+}
+
+button {
+    background: #176b52;
+    color: white;
+    padding: 11px 16px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #10533f;
+}
+
+.mensagem {
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 5px;
+    background: #e5f5eb;
+    color: #155b35;
+    overflow-wrap: anywhere;
+}
+
+.oculto {
+    display: none;
+}
+
+.solicitacao {
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    padding: 15px;
+    margin-top: 12px;
+    overflow-wrap: anywhere;
+}
+
+.status {
+    display: inline-block;
+    padding: 3px 9px;
+    border-radius: 15px;
+    background: #fff0c2;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.status.concluida {
+    background: #d8f3df;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #e3e8e6;
+    color: #45534d;
+}
+
+@media (max-width: 600px) {
+    header,
+    nav {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    section {
+        padding: 18px;
+    }
+}

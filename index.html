@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Comunitário</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>Portal Comunitário</h1>
+        <p>Serviços e solicitações do nosso bairro</p>
+    </header>
+
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#solicitar">Solicitar serviço</a>
+        <a href="#faq">Perguntas frequentes</a>
+        <a href="#contato">Contato</a>
+        <a href="#admin">Administração</a>
+    </nav>
+
+    <main>
+        <section id="inicio">
+            <h2>Bem-vindo ao Portal Comunitário</h2>
+            <p>
+                Consulte os serviços disponíveis no bairro e envie
+                suas solicitações de maneira simples e rápida.
+            </p>
+        </section>
+
+        <section id="servicos">
+            <h2>Serviços disponíveis</h2>
+
+            <label for="filtro">Filtrar por categoria</label>
+            <select id="filtro">
+                <option value="todos">Todas as categorias</option>
+                <option value="educacao">Educação</option>
+                <option value="comunidade">Comunidade</option>
+                <option value="social">Assistência social</option>
+            </select>
+
+            <div class="servicos" id="listaServicos">
+                <article class="card" data-categoria="educacao">
+                    <h3>Reforço escolar</h3>
+                    <p>Apoio escolar para crianças e adolescentes.</p>
+                </article>
+
+                <article class="card" data-categoria="comunidade">
+                    <h3>Oficinas comunitárias</h3>
+                    <p>Atividades culturais e recreativas.</p>
+                </article>
+
+                <article class="card" data-categoria="social">
+                    <h3>Atendimento social</h3>
+                    <p>Orientação e encaminhamento social.</p>
+                </article>
+
+                <article class="card" data-categoria="comunidade">
+                    <h3>Empréstimo de materiais</h3>
+                    <p>Materiais para atividades comunitárias.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="solicitar">
+            <h2>Solicitar um serviço</h2>
+
+            <form id="formSolicitacao">
+                <label for="nome">Nome completo</label>
+                <input type="text" id="nome" maxlength="100" required>
+
+                <label for="categoria">Tipo de serviço</label>
+                <select id="categoria" required>
+                    <option value="">Selecione um serviço</option>
+                    <option>Reforço escolar</option>
+                    <option>Oficinas comunitárias</option>
+                    <option>Atendimento social</option>
+                    <option>Empréstimo de materiais</option>
+                </select>
+
+                <label for="descricao">Descrição da solicitação</label>
+                <textarea id="descricao" rows="4" maxlength="1000"
+                    required></textarea>
+
+                <button type="submit">Enviar solicitação</button>
+            </form>
+
+            <div id="mensagem" class="mensagem oculto" role="status"></div>
+        </section>
+
+        <section id="faq">
+            <h2>Perguntas frequentes</h2>
+
+            <details>
+                <summary>Como solicito um serviço?</summary>
+                <p>Preencha o formulário e clique em Enviar solicitação.</p>
+            </details>
+
+            <details>
+                <summary>Como acompanho minha solicitação?</summary>
+                <p>Consulte o painel administrativo demonstrativo.</p>
+            </details>
+
+            <details>
+                <summary>O envio garante o atendimento?</summary>
+                <p>Não. A solicitação precisa ser analisada pela equipe.</p>
+            </details>
+        </section>
+
+        <section id="contato">
+            <h2>Contato e horários</h2>
+            <p><strong>Local:</strong> Centro Comunitário do Bairro</p>
+            <p><strong>Telefone:</strong> (55) 3333-0000 (fictício)</p>
+            <p><strong>Horário:</strong> Segunda a sexta, das 8h às 17h.</p>
+            <p>Também é possível buscar atendimento presencial.</p>
+        </section>
+
+        <section id="admin">
+            <h2>Painel administrativo</h2>
+            <p>Área demonstrativa para consultar solicitações e atualizar status.</p>
+            <p><small>Não possui autenticação real.</small></p>
+
+            <div id="listaSolicitacoes"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Portal Comunitário — Projeto acadêmico</p>
+    </footer>
+
+</body>
+</html>
